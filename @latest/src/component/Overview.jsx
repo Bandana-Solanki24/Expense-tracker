@@ -5,20 +5,21 @@ const Overview = ({ expenses, selectedMonth, onMonthChange }) => {
 
     const total = expenses.reduce((sum, item) => sum + parseFloat(item.amount), 0);
 
-    const monthNames = {
-        "01": "January",
-        "02": "February",
-        "03": "March",
-        "04": "April",
-        "05": "May",
-        "06": "June",
-        "07": "July",
-        "08": "August",
-        "09": "September",
-        "10": "October",
-        "11": "November",
-        "12": "December",
-    };
+    const monthNames = [
+        { value: "01", name: "January" },
+        { value: "02", name: "February" },
+        { value: "03", name: "March" },
+        { value: "04", name: "April" },
+        { value: "05", name: "May" },
+        { value: "06", name: "June" },
+        { value: "07", name: "July" },
+        { value: "08", name: "August" },
+        { value: "09", name: "September" },
+        { value: "10", name: "October" },
+        { value: "11", name: "November" },
+        { value: "12", name: "December" },
+    ];
+
     const topCategory =
         expenses.length > 0
             ? expenses.reduce((acc, curr) => {
@@ -40,8 +41,8 @@ const Overview = ({ expenses, selectedMonth, onMonthChange }) => {
                     <label for="month">Select Month: {monthNames[selectedMonth] || "All Months"}</label>
                     <select id="month" value={selectedMonth} onChange={(e) => onMonthChange(e.target.value)}>
                         <option value="">-- Select Month --</option>
-                        {Object.entries(monthNames).map(([value, name]) => (
-                            <option key={value} value={value}>{name}</option>
+                        {monthNames.map((month) => (
+                            <option key={month.value} value={month.value}>{month.name}</option>
                         ))}
 
                     </select>
