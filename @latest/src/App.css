@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+.app-container {
+  padding: 1rem 2rem;
+  background: #f7f8fc;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid darkgrey;
+  background: white;
+}
+
+.main-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.form-card,
+.expense-list {
+  /* flex: 1; */
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+}
+.form-card {
+  flex: 1;
+}
+.expense-list {
+  flex: 2;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  background-color: teal;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.expense-card {
+  display: flex;
+  justify-content: space-between;
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.tag {
+  background: #eee;
+  padding: 2px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.overview {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.overview-box {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 20px 15px;
+  margin-bottom: 2rem;
+  background: white;
+}
+
+.box {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px #ccc;
+  min-width: 245px;
+}
+select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: #333;
+}
+
+select:focus {
+  border-color: teal;
+  box-shadow: 0 0 5px rgba(0, 128, 128, 0.3);
+  outline: none;
+}
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+}
+.overview-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #605b5b;
+}
